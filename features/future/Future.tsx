@@ -1,4 +1,5 @@
 import { Container } from "@/components/common/Container";
+import { PlaceholderImage } from "@/components/common/PlaceholderImage";
 import { Reveal } from "@/components/common/Reveal";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { getFuture } from "@/lib/repositories/future";
@@ -32,7 +33,13 @@ export function Future() {
                     </figcaption>
                   ) : null}
                 </figure>
-              ) : null,
+              ) : (
+                <PlaceholderImage
+                  key={index}
+                  label={image.alt}
+                  className={index === 0 ? "sm:row-span-2 h-full" : "h-full"}
+                />
+              ),
             )}
           </Reveal>
         ) : null}

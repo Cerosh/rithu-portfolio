@@ -8,14 +8,18 @@ const variants: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
+// framer-motion's event props (drag/animation handlers) have incompatible
+// signatures with React's DOM equivalents — exclude them so the rest of
+// HTMLAttributes can be safely spread onto both the plain div and
+// motion.div branches below.
+type RevealProps = Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart" | "onAnimationEnd"
+> & { delay?: number };
+
 // Wraps a section in a gentle fade/rise on scroll into view. Fully inert
 // when the visitor has requested reduced motion (content just appears).
-export function Reveal({
-  children,
-  delay = 0,
-  className,
-  ...rest
-}: HTMLAttributes<HTMLDivElement> & { delay?: number }) {
+export function Reveal({ children, delay = 0, className, ...rest }: RevealProps) {
   const prefersReducedMotion = useReducedMotion();
 
   if (prefersReducedMotion) {
@@ -34,6 +38,7 @@ export function Reveal({
       viewport={{ once: true, margin: "-80px" }}
       variants={variants}
       transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      {...rest}
     >
       {children}
     </motion.div>

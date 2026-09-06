@@ -173,6 +173,18 @@ export function GeometryMusicField() {
     let height = 0;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
+    function drawStaticFrame() {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, width, height);
+      drawStaffFragment(ctx, width * 0.85, height * 0.18, 46, 0.05);
+      for (const p of particles) {
+        const x = p.homeX * width;
+        const y = p.homeY * height;
+        if (p.isMusic) drawMusic(ctx, p, x, y);
+        else drawGeometry(ctx, p, x, y, p.rotOffset);
+      }
+    }
+
     function resize() {
       if (!canvas || !container) return;
       const rect = container.getBoundingClientRect();
@@ -183,21 +195,17 @@ export function GeometryMusicField() {
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       ctx?.setTransform(dpr, 0, 0, dpr, 0, 0);
+      // Resizing the canvas clears its bitmap — redraw immediately when the
+      // animation loop isn't the one doing that on every frame.
+      if (reduceMotionQuery.matches) drawStaticFrame();
     }
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(container);
     resize();
 
-    // Static, reduced-motion frame: draw once and stop.
+    // Static, reduced-motion frame: draw once (resize() keeps it redrawn).
     if (reduceMotionQuery.matches) {
-      drawStaffFragment(ctx, width * 0.85, height * 0.18, 46, 0.05);
-      for (const p of particles) {
-        const x = p.homeX * width;
-        const y = p.homeY * height;
-        if (p.isMusic) drawMusic(ctx, p, x, y);
-        else drawGeometry(ctx, p, x, y, p.rotOffset);
-      }
       return () => resizeObserver.disconnect();
     }
 

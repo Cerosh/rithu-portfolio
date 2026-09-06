@@ -2,6 +2,7 @@ import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { EmptyState } from "@/components/common/EmptyState";
+import { PlaceholderImage } from "@/components/common/PlaceholderImage";
 import { Tag } from "@/components/common/Tag";
 import { getIcon } from "@/lib/icon-map";
 import { getBeyond } from "@/lib/repositories/beyond";
@@ -37,6 +38,12 @@ function StoryItem({ item }: { item: BeyondItem }) {
             alt={hero.alt}
             className="aspect-[4/3] w-full object-cover sm:aspect-auto sm:h-full"
           />
+        ) : hero ? (
+          <PlaceholderImage
+            label={hero.alt}
+            aspect="aspect-[4/3] sm:aspect-auto"
+            className="w-full sm:h-full"
+          />
         ) : null}
         <div className="p-6">
           <span className="font-mono text-eyebrow tracking-wide text-accent-warm uppercase">
@@ -67,7 +74,14 @@ function StoryItem({ item }: { item: BeyondItem }) {
                     alt={image.alt}
                     className="aspect-square w-16 rounded-lg border border-line object-cover"
                   />
-                ) : null,
+                ) : (
+                  <PlaceholderImage
+                    key={index}
+                    label={image.alt}
+                    aspect="aspect-square"
+                    className="w-16 rounded-lg p-1"
+                  />
+                ),
               )}
             </div>
           ) : null}

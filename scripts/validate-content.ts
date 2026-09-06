@@ -61,6 +61,15 @@ for (const [name, load] of checks) {
   }
 }
 
+// The checks below re-load content that's already known-good — skip them if
+// any file failed schema validation above, since re-calling the same getX()
+// on invalid content would throw instead of reporting cleanly.
+if (failed) {
+  console.error("\nSkipping file-existence checks — fix the schema errors above first.");
+  console.error("\nContent validation failed.");
+  process.exit(1);
+}
+
 const missingImages = [
   ...checkImagePaths("profile.photo", getProfile().photo ? [getProfile().photo!] : []),
   ...getProjects().items.flatMap((p) => checkImagePaths(`project "${p.title}"`, p.images)),

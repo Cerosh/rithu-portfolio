@@ -2,6 +2,7 @@ import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { EmptyState } from "@/components/common/EmptyState";
+import { PlaceholderImage } from "@/components/common/PlaceholderImage";
 import { getLeadership } from "@/lib/repositories/leadership";
 import type { LeadershipEntry } from "@/lib/schemas/content";
 
@@ -68,7 +69,9 @@ export function Leadership() {
                             alt={image.alt}
                             className="w-full rounded-xl border border-line object-cover"
                           />
-                        ) : null,
+                        ) : (
+                          <PlaceholderImage key={imageIndex} label={image.alt} />
+                        ),
                       )}
                     </div>
                   ) : null}
