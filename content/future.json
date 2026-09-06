@@ -1,5 +1,17 @@
 {
-  "whyEngineering": null,
-  "aspirationStatement": null,
-  "womenInEngineeringNote": null
+  "whyEngineering": "I've always liked shapes and patterns, and figuring out how things actually work rather than just using them. Engineering feels like it sits right at that intersection — problem-solving, making things, and building things that help people. Civil engineering in particular has caught my attention because it's all of that at a scale you can actually walk through and live in.",
+  "aspirationStatement": "Dare to Dream: STEM Careers for Girls at UTS was one of the first times this felt real rather than just an idea — hearing from people who actually work in STEM and engineering made me start thinking, this might actually be what I want to do. I'm only in Year 9, though, so civil engineering is a strong current curiosity, not a decided plan. I'm planning to keep exploring — more STEM experiences, competitions, and eventually work experience — before I narrow anything down.",
+  "womenInEngineeringNote": "Dare to Dream was specifically about STEM careers for girls, and it mattered to be in a room full of other girls asking the same questions I was, hearing from women who'd actually built careers in these fields. It made the idea feel a lot less abstract.",
+  "images": [
+    {
+      "src": "/images/dare-to-dream/group-hero.jpg",
+      "alt": "Rithu and around 50 other Year 9 and 10 students on stage under a screen reading \"Dare to Dream: STEM Careers for Girls\"",
+      "caption": "Dare to Dream: STEM Careers for Girls, UTS"
+    },
+    {
+      "src": "/images/dare-to-dream/audience.jpg",
+      "alt": "Rithu sitting with three other students listening to a STEM careers presentation",
+      "caption": null
+    }
+  ]
 }

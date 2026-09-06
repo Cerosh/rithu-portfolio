@@ -1,0 +1,63 @@
+{
+  "intro": "Books are one of the things I keep coming back to — not just reading them, but writing about them for the school library and arguing about them at Book Week.",
+  "reviews": [
+    {
+      "id": "drift",
+      "bookTitle": "Drift",
+      "author": "Pip Harry",
+      "dateLabel": "Year 9 — 2026 CBCA Book of the Year Notable",
+      "excerpt": "Borrow it today and embrace the magic.",
+      "image": {
+        "src": "/images/books/drift-review.jpg",
+        "alt": "\"Awesome Reads: The Library Lowdown\" review card for Drift by Pip Harry, written by Rithu, Year 9"
+      }
+    },
+    {
+      "id": "desert-dawn",
+      "bookTitle": "Desert Dawn",
+      "author": "Waris Dirie",
+      "dateLabel": "Year 9",
+      "excerpt": "This is an inspiring book that portrays Waris as a brave woman who used her voice to stand up for herself and support other women.",
+      "image": {
+        "src": "/images/books/desert-dawn-review.jpg",
+        "alt": "\"Awesome Reads: The Library Lowdown\" review card for Desert Dawn by Waris Dirie, written by Rithu, Year 9"
+      }
+    },
+    {
+      "id": "trust-me-im-lying",
+      "bookTitle": "Trust Me, I'm Lying",
+      "author": "Mary Elizabeth Summer",
+      "dateLabel": "Year 8",
+      "excerpt": "The characters Summer creates are vivid and memorable, and the plot is full of unexpected twists and emotional highs and lows. It's a gripping story that keeps you guessing until the very end.",
+      "image": {
+        "src": "/images/books/trust-me-im-lying-review.jpg",
+        "alt": "\"Awesome Reads: The Library Lowdown\" review card for Trust Me, I'm Lying by Mary Elizabeth Summer, written by Rithu, Year 8"
+      }
+    },
+    {
+      "id": "birdy",
+      "bookTitle": "Birdy",
+      "author": "Sharon Kernot",
+      "dateLabel": "Year 8 — 2025 CBCA Book of the Year Shortlist",
+      "excerpt": "Birdy is a thought-provoking and beautifully written novel that lingers in the mind long after the final page.",
+      "image": {
+        "src": "/images/books/birdy-review.jpg",
+        "alt": "\"Awesome Reads: The Library Lowdown\" review card for Birdy by Sharon Kernot, written by Rithu, Year 8"
+      }
+    }
+  ],
+  "conversations": [
+    {
+      "id": "book-week-adaptation",
+      "prompt": "What's a book you would never want adapted into a movie or TV series because it would lose something important?",
+      "response": "I believe the Twilight Saga books should never have been adapted into movies because they lose much of the depth, emotion and character development that make the novels so engaging.",
+      "dateLabel": "Book Week, Year 9"
+    },
+    {
+      "id": "book-week-author-style",
+      "prompt": "Which author do you think has the most recognisable writing style, and what makes it so distinctive?",
+      "response": "R.L. Stine has a recognisable writing style because he uses simple, short chapters, along with lots of suspense and cliffhangers. His stories often create a feeling of mystery and fear while keeping the reader wanting to know what happens next. His use of unexpected twists, creepy settings and relatable young characters also makes his writing distinctive.",
+      "dateLabel": "Book Week, Year 9"
+    }
+  ]
+}

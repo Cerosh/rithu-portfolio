@@ -7,6 +7,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { getProfile } from "@/lib/repositories/profile";
 import { getCuriosities } from "@/lib/repositories/curiosities";
+import { getBooks } from "@/lib/repositories/books";
 import { getProjects } from "@/lib/repositories/projects";
 import { getMusic } from "@/lib/repositories/music";
 import { getLeadership } from "@/lib/repositories/leadership";
@@ -34,6 +35,7 @@ function checkImagePaths(label: string, images: Array<{ src: string | null }>): 
 const checks: Array<[string, () => unknown[] | object]> = [
   ["profile.json", getProfile],
   ["curiosities.json", getCuriosities],
+  ["books.json", getBooks],
   ["projects.json", getProjects],
   ["music.json", getMusic],
   ["leadership.json", getLeadership],
@@ -64,6 +66,11 @@ const missingImages = [
   ...getProjects().items.flatMap((p) => checkImagePaths(`project "${p.title}"`, p.images)),
   ...getMusic().items.flatMap((m) => checkImagePaths(`music "${m.title}"`, m.images)),
   ...getBeyond().items.flatMap((b) => checkImagePaths(`beyond "${b.title}"`, b.images)),
+  ...getLeadership().items.flatMap((l) => checkImagePaths(`leadership "${l.role}"`, l.images)),
+  ...checkImagePaths("future", getFuture().images),
+  ...getBooks().reviews.flatMap((r) =>
+    checkImagePaths(`book review "${r.bookTitle}"`, r.image ? [r.image] : []),
+  ),
 ];
 
 if (missingImages.length > 0) {

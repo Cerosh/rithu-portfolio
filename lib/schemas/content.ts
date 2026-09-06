@@ -45,6 +45,33 @@ export const curiositiesFileSchema = z.object({
   items: z.array(curiositySchema).default([]),
 });
 
+// A short book review she's written (published through the school library),
+// or a Book Week conversation-starter she personally answered. Deliberately
+// lightweight — an excerpt, not the full review — this lives inside the
+// Curious About section rather than as its own nav item (brief: "Books &
+// Words").
+export const bookReviewSchema = z.object({
+  id: z.string().min(1),
+  bookTitle: z.string().min(1),
+  author: z.string().min(1).nullable(),
+  dateLabel: z.string().min(1).nullable(), // e.g. "Year 9"
+  excerpt: z.string().min(1), // a short quoted excerpt from her review, not the full text
+  image: imageSchema.nullable().default(null),
+});
+
+export const bookConversationSchema = z.object({
+  id: z.string().min(1),
+  prompt: z.string().min(1), // the Book Week conversation-starter question
+  response: z.string().min(1), // her actual, attributed answer
+  dateLabel: z.string().min(1).nullable(),
+});
+
+export const booksFileSchema = z.object({
+  intro: z.string().min(1).nullable(),
+  reviews: z.array(bookReviewSchema).default([]),
+  conversations: z.array(bookConversationSchema).default([]),
+});
+
 export const projectSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -96,6 +123,10 @@ export const leadershipEntrySchema = z.object({
   whoItHelped: z.string().min(1).nullable(),
   whatChanged: z.string().min(1).nullable(),
   whatSheLearned: z.string().min(1).nullable(),
+  // Optional evidence photo(s) — most entries have none; the few stories
+  // with real photographic evidence (a mentoring session, an event she ran)
+  // get one hero image, not a gallery.
+  images: z.array(imageSchema).default([]),
 });
 
 export const leadershipFileSchema = z.object({
@@ -137,6 +168,9 @@ export const futureSchema = z.object({
   whyEngineering: z.string().min(1).nullable(),
   aspirationStatement: z.string().min(1).nullable(),
   womenInEngineeringNote: z.string().min(1).nullable(),
+  // Evidence photos for the milestone that kicked this section off (Dare to
+  // Dream) — a small hero + supporting image, not a gallery.
+  images: z.array(imageSchema).default([]),
 });
 
 export const timelineStageSchema = z.object({
@@ -178,6 +212,9 @@ export const contactSchema = z.object({
 export type Profile = z.infer<typeof profileSchema>;
 export type Curiosity = z.infer<typeof curiositySchema>;
 export type CuriositiesFile = z.infer<typeof curiositiesFileSchema>;
+export type BookReview = z.infer<typeof bookReviewSchema>;
+export type BookConversation = z.infer<typeof bookConversationSchema>;
+export type BooksFile = z.infer<typeof booksFileSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type ProjectsFile = z.infer<typeof projectsFileSchema>;
 export type MusicEntry = z.infer<typeof musicEntrySchema>;

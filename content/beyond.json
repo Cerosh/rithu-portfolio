@@ -25,6 +25,30 @@
         }
       ],
       "reflection": null
+    },
+    {
+      "id": "mandala-painting",
+      "category": "activity",
+      "title": "Painting a Mandala",
+      "note": "A school craft session spent filling in a big mandala pattern, one colour at a time, until the whole thing came together.",
+      "dateLabel": null,
+      "images": [
+        {
+          "src": "/images/culture/mandala-hero.jpg",
+          "alt": "Rithu holding a finished, brightly coloured mandala painting on a round canvas",
+          "caption": null
+        }
+      ],
+      "reflection": null
+    },
+    {
+      "id": "capybara-day",
+      "category": "activity",
+      "title": "International Capybara Day",
+      "note": "Students gathered at recess to make capybara keychains — I made one of my own.",
+      "dateLabel": null,
+      "images": [],
+      "reflection": null
     }
   ]
 }

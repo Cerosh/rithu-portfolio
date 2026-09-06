@@ -1,4 +1,11 @@
 {
   "intro": null,
-  "items": []
+  "items": [
+    {
+      "id": "dare-to-dream-reflection",
+      "prompt": "reflection",
+      "dateLabel": "Year 9",
+      "entry": "Dare to Dream at UTS is where my engineering curiosity started becoming real. Before that it was a vague idea; after it, it turned into something I actually wanted to keep exploring — starting with civil engineering, but I'm not locking anything in yet."
+    }
+  ]
 }

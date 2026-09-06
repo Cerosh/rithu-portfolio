@@ -2,14 +2,20 @@
   "intro": null,
   "items": [
     {
-      "id": "primary-prosperities",
-      "role": "Primary Prosperities",
+      "id": "primary-prosperitas",
+      "role": "Primary Prosperitas",
       "organisation": null,
       "dateLabel": "April 2026 – Present",
-      "whatSheDid": "Supporting primary school students with their major projects, helping them shape their ideas and put together how to present the work.",
-      "whoItHelped": "Younger students working through big projects for the first time.",
+      "whatSheDid": "Mentoring students from Barnier, Hambledon, Nirimba Fields and Quakers Hill Public Schools through the 2026 Primary Prosperitas program — helping them shape a personal interest project, work out their own driving question, and set goals for it.",
+      "whoItHelped": "Younger primary students working through a big project of their own for the first time.",
       "whatChanged": null,
-      "whatSheLearned": null
+      "whatSheLearned": null,
+      "images": [
+        {
+          "src": "/images/primary-prosperitas/mentoring-hero.jpg",
+          "alt": "Rithu sitting across a table from a primary school mentee, going through a worksheet together in the library"
+        }
+      ]
     },
     {
       "id": "private-tutoring",
@@ -19,27 +25,55 @@
       "whatSheDid": "Providing one-on-one support to students who want extra help getting ahead in their schoolwork.",
       "whoItHelped": "Students looking for support outside of regular class time.",
       "whatChanged": null,
-      "whatSheLearned": null
+      "whatSheLearned": null,
+      "images": []
     },
     {
       "id": "src",
       "role": "Student Representative Council (SRC)",
       "organisation": null,
       "dateLabel": "January 2026 – Present",
-      "whatSheDid": "Helping bring students' suggestions to the school and contributing to changes that affect everyone, including through Mini Vinnies.",
+      "whatSheDid": "Helping bring students' suggestions to the school and contributing to changes that affect everyone, including through Mini Vinnies. Being part of the SRC has also meant a full Leadership Day of workshops on public speaking, critical thinking and problem-solving, alongside smaller team moments like the SRC's Valentine's Day rose deliveries around the school.",
       "whoItHelped": "Fellow students, by giving them a voice in decisions that affect the school.",
       "whatChanged": null,
-      "whatSheLearned": null
+      "whatSheLearned": null,
+      "images": []
     },
     {
       "id": "library-monitor",
       "role": "Library Monitor",
       "organisation": null,
       "dateLabel": "January 2025 – Present",
-      "whatSheDid": "Helping students find books, running library activities, and writing book summaries.",
+      "whatSheDid": "Helping students find books, running library activities, and writing book reviews for the library's own review series, The Library Lowdown.",
       "whoItHelped": "Students looking for their next read.",
-      "whatChanged": null,
-      "whatSheLearned": null
+      "whatChanged": "Recognised in the school's 2025 Library Crew celebration and awarded a Certificate of School Service for her contribution as a Library Monitor, now in her second year in the role.",
+      "whatSheLearned": null,
+      "images": [
+        {
+          "src": "/images/library-monitor/certificate.jpg",
+          "alt": "Rithu holding her 2025 Certificate of School Service, awarded for being a QHHS Library Monitor"
+        },
+        {
+          "src": "/images/library-monitor/welcome.jpg",
+          "alt": "Library announcement welcoming Rithu and Arshpreet as new Library Monitors, standing together in front of the library shelves"
+        }
+      ]
+    },
+    {
+      "id": "book-blurb-challenge",
+      "role": "Devised & Ran the Book Blurb Challenge",
+      "organisation": "School Library",
+      "dateLabel": "Year 9",
+      "whatSheDid": "Came up with a book-blurb matching competition, then organised and ran it for the whole school — three fast-paced rounds where teams raced to match book covers to their blurbs.",
+      "whoItHelped": "Turned an ordinary lunchtime into a genuinely competitive event for the school's book-loving crowd.",
+      "whatChanged": "It came right down to the final round, with a block of Cadbury chocolate on the line.",
+      "whatSheLearned": null,
+      "images": [
+        {
+          "src": "/images/book-blurb-challenge/hero.jpg",
+          "alt": "Rithu holding up a book beside a sign reading 'The Blurb Challenge', with a teammate holding a block of Cadbury Dairy Milk chocolate"
+        }
+      ]
     },
     {
       "id": "music-trivia-host",
@@ -49,7 +83,8 @@
       "whatSheDid": "Put together and hosted a music trivia challenge for the whole school during Multicultural Week — choosing the songs, building the slides, and running the competition from the front of the room with a microphone.",
       "whoItHelped": "Gave students a shared lunchtime activity, and a lighthearted way into music and culture beyond their own.",
       "whatChanged": "Turned an ordinary lunch break into a packed, competitive celebration of music from around the world.",
-      "whatSheLearned": null
+      "whatSheLearned": null,
+      "images": []
     },
     {
       "id": "house-captain",
@@ -59,7 +94,8 @@
       "whatSheDid": "Encouraged other students to be more responsible, and helped contribute to a better school environment day to day.",
       "whoItHelped": "The wider school community.",
       "whatChanged": null,
-      "whatSheLearned": null
+      "whatSheLearned": null,
+      "images": []
     }
   ]
 }
