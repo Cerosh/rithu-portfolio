@@ -25,18 +25,18 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const profile = getProfile();
+
 export const metadata: Metadata = {
   title: {
-    default: "[Add name] — Portfolio",
-    template: "%s — [Add name]",
+    default: `${profile.firstName} — Portfolio`,
+    template: `%s — ${profile.firstName}`,
   },
   description:
     "A growing portfolio: curiosity, problem-solving, music, and the things I'm exploring — currently a Year 9 student in Sydney.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const profile = getProfile();
-
   return (
     <html
       lang="en"
