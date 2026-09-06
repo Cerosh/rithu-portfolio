@@ -14,9 +14,18 @@
           "alt": "Rithu playing violin on stage next to another musician playing hand percussion, in front of a \"Ponnonam 2026\" banner",
           "caption": null
         }
-      ],
+      ]
+    },
+    {
+      "id": "various-bands-performance",
+      "title": "Performing With Various Bands",
+      "type": "performance",
+      "dateLabel": null,
+      "description": "I've also performed with a number of different bands — details to come.",
+      "reflection": null,
+      "images": [],
       "video": {
-        "src": "/videos/ponnonam-2026/performance.mp4"
+        "src": "/videos/various-bands/performance.mp4"
       }
     },
     {
