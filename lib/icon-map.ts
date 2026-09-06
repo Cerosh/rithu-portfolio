@@ -13,6 +13,7 @@ import {
   Disc3,
   Puzzle,
   Hand,
+  Camera,
   type LucideIcon,
 } from "lucide-react";
 
@@ -34,6 +35,7 @@ export const iconMap: Record<string, LucideIcon> = {
   album: Disc3,
   puzzle: Puzzle,
   hand: Hand,
+  camera: Camera,
 };
 
 export function getIcon(name: string): LucideIcon {

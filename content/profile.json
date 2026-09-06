@@ -2,12 +2,13 @@
   "firstName": "Rithu",
   "gradeLabel": "Year 9",
   "location": "Sydney, Australia",
-  "tagline": null,
-  "introStatement": null,
-  "currentlyExploring": [],
+  "tagline": "I like figuring things out — and I like sharing what I figure out even more.",
+  "introStatement": "Between music, tutoring, and helping out in the library, most of what I do outside class comes back to the same thing: taking something I've learned and passing it on.",
+  "currentlyExploring": ["Violin", "Photography", "Tutoring"],
   "aboutParagraphs": [
-    "I love music, but what I enjoy most is sharing it. During Multicultural Week, I turned that into an International Music Trivia Challenge — picking songs from around the world and getting a room full of people trying to place each one."
+    "I love music, but what I enjoy most is sharing it. During Multicultural Week, I turned that into an International Music Trivia Challenge — picking songs from around the world and getting a room full of people trying to place each one.",
+    "Outside of music, I like being useful in small, practical ways — helping people find their next book as a library monitor, tutoring students who want extra support, and pulling coffees at the church café on weekends to help fundraise."
   ],
-  "values": [],
+  "values": ["Attention to detail", "Teamwork and collaboration", "Adaptive learning"],
   "photo": null
 }

@@ -2,6 +2,46 @@
   "intro": null,
   "items": [
     {
+      "id": "primary-prosperities",
+      "role": "Primary Prosperities",
+      "organisation": null,
+      "dateLabel": "April 2026 – Present",
+      "whatSheDid": "Supporting primary school students with their major projects, helping them shape their ideas and put together how to present the work.",
+      "whoItHelped": "Younger students working through big projects for the first time.",
+      "whatChanged": null,
+      "whatSheLearned": null
+    },
+    {
+      "id": "private-tutoring",
+      "role": "Private Tutoring",
+      "organisation": null,
+      "dateLabel": "April 2026 – Present",
+      "whatSheDid": "Providing one-on-one support to students who want extra help getting ahead in their schoolwork.",
+      "whoItHelped": "Students looking for support outside of regular class time.",
+      "whatChanged": null,
+      "whatSheLearned": null
+    },
+    {
+      "id": "src",
+      "role": "Student Representative Council (SRC)",
+      "organisation": null,
+      "dateLabel": "January 2026 – Present",
+      "whatSheDid": "Helping bring students' suggestions to the school and contributing to changes that affect everyone, including through Mini Vinnies.",
+      "whoItHelped": "Fellow students, by giving them a voice in decisions that affect the school.",
+      "whatChanged": null,
+      "whatSheLearned": null
+    },
+    {
+      "id": "library-monitor",
+      "role": "Library Monitor",
+      "organisation": null,
+      "dateLabel": "January 2025 – Present",
+      "whatSheDid": "Helping students find books, running library activities, and writing book summaries.",
+      "whoItHelped": "Students looking for their next read.",
+      "whatChanged": null,
+      "whatSheLearned": null
+    },
+    {
       "id": "music-trivia-host",
       "role": "Host, International Music Trivia Challenge",
       "organisation": "Multicultural Week",
@@ -9,6 +49,16 @@
       "whatSheDid": "Put together and hosted a music trivia challenge for the whole school during Multicultural Week — choosing the songs, building the slides, and running the competition from the front of the room with a microphone.",
       "whoItHelped": "Gave students a shared lunchtime activity, and a lighthearted way into music and culture beyond their own.",
       "whatChanged": "Turned an ordinary lunch break into a packed, competitive celebration of music from around the world.",
+      "whatSheLearned": null
+    },
+    {
+      "id": "house-captain",
+      "role": "House Captain",
+      "organisation": null,
+      "dateLabel": "January 2023 – December 2023",
+      "whatSheDid": "Encouraged other students to be more responsible, and helped contribute to a better school environment day to day.",
+      "whoItHelped": "The wider school community.",
+      "whatChanged": null,
       "whatSheLearned": null
     }
   ]
