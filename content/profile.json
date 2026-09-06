@@ -10,5 +10,9 @@
     "Outside of music, I like being useful in small, practical ways — helping people find their next book as a library monitor, tutoring students who want extra support, and pulling coffees at the church café on weekends to help fundraise."
   ],
   "values": ["Attention to detail", "Teamwork and collaboration", "Adaptive learning"],
-  "photo": null
+  "photo": {
+    "src": "/images/about/portrait.jpg",
+    "alt": "Rithu playing violin in an ensemble rehearsal, mid-performance",
+    "caption": null
+  }
 }
