@@ -37,7 +37,13 @@
       "whoItHelped": "Fellow students, by giving them a voice in decisions that affect the school.",
       "whatChanged": null,
       "whatSheLearned": null,
-      "images": []
+      "images": [
+        {
+          "src": "/images/src/leadership-day.jpg",
+          "alt": "Rithu wearing her Student Representative Council badge, listening alongside fellow SRC members during a Leadership Day workshop",
+          "caption": null
+        }
+      ]
     },
     {
       "id": "library-monitor",
