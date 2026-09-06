@@ -1,11 +1,13 @@
 {
-  "firstName": "[Add first name]",
-  "gradeLabel": "[Add grade, e.g. Year 9]",
+  "firstName": "Rithu",
+  "gradeLabel": "Year 9",
   "location": "Sydney, Australia",
   "tagline": null,
   "introStatement": null,
   "currentlyExploring": [],
-  "aboutParagraphs": [],
+  "aboutParagraphs": [
+    "I love music, but what I enjoy most is sharing it. During Multicultural Week, I turned that into an International Music Trivia Challenge — picking songs from around the world and getting a room full of people trying to place each one."
+  ],
   "values": [],
   "photo": null
 }

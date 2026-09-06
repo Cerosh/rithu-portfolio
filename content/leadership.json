@@ -1,4 +1,15 @@
 {
   "intro": null,
-  "items": []
+  "items": [
+    {
+      "id": "music-trivia-host",
+      "role": "Host, International Music Trivia Challenge",
+      "organisation": "Multicultural Week",
+      "dateLabel": "Year 9",
+      "whatSheDid": "Put together and hosted a music trivia challenge for the whole school during Multicultural Week — choosing the songs, building the slides, and running the competition from the front of the room with a microphone.",
+      "whoItHelped": "Gave students a shared lunchtime activity, and a lighthearted way into music and culture beyond their own.",
+      "whatChanged": "Turned an ordinary lunch break into a packed, competitive celebration of music from around the world.",
+      "whatSheLearned": null
+    }
+  ]
 }

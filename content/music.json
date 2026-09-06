@@ -1,4 +1,25 @@
 {
   "intro": null,
-  "items": []
+  "items": [
+    {
+      "id": "music-trivia-challenge",
+      "title": "All Around the World: Music Trivia",
+      "type": "community",
+      "dateLabel": "Multicultural Week, Year 9",
+      "description": "During Multicultural Week, I hosted an International Music Trivia Challenge in the library at lunch — playing a mix of songs from around the world and challenging people to name the title, the language, and the country each one came from. It turned into a proper competition, with plenty of deliberation over every clue.",
+      "reflection": null,
+      "images": [
+        {
+          "src": "/images/music-trivia/hosting-hero.jpg",
+          "alt": "Rithu holding a microphone and speaking in front of a projected \"All Around the World Music Trivia\" title slide",
+          "caption": null
+        },
+        {
+          "src": "/images/music-trivia/hosting-gesture.jpg",
+          "alt": "Rithu gesturing toward the room while hosting the music trivia challenge",
+          "caption": null
+        }
+      ]
+    }
+  ]
 }
