@@ -105,10 +105,15 @@ export const leadershipFileSchema = z.object({
 
 export const beyondItemSchema = z.object({
   id: z.string().min(1),
-  category: z.enum(["movie", "album", "book", "show", "other"]),
+  category: z.enum(["movie", "album", "book", "show", "activity", "other"]),
   title: z.string().min(1),
   note: z.string().min(1).nullable(),
   dateLabel: z.string().min(1).nullable(),
+  // Most "on my radar" items (a movie, an album) carry no photos and render
+  // as a plain tile. An item with photos — something she actually did, not
+  // just something she's into — renders as a small photo-story tile instead.
+  images: z.array(imageSchema).default([]),
+  reflection: z.string().min(1).nullable().default(null),
 });
 
 export const beyondFileSchema = z.object({

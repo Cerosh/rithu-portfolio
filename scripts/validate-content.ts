@@ -63,6 +63,7 @@ const missingImages = [
   ...checkImagePaths("profile.photo", getProfile().photo ? [getProfile().photo!] : []),
   ...getProjects().items.flatMap((p) => checkImagePaths(`project "${p.title}"`, p.images)),
   ...getMusic().items.flatMap((m) => checkImagePaths(`music "${m.title}"`, m.images)),
+  ...getBeyond().items.flatMap((b) => checkImagePaths(`beyond "${b.title}"`, b.images)),
 ];
 
 if (missingImages.length > 0) {

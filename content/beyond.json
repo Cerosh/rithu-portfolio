@@ -1,4 +1,30 @@
 {
   "intro": null,
-  "items": []
+  "items": [
+    {
+      "id": "finger-knitting",
+      "category": "activity",
+      "title": "Making Something With My Hands",
+      "note": "We did a finger knitting workshop at school — turning a ball of yarn into something wearable using just your hands, no needles needed. I made a scarf.",
+      "dateLabel": null,
+      "images": [
+        {
+          "src": "/images/finger-knitting/portrait.jpg",
+          "alt": "Rithu wearing a pink finger-knitted scarf",
+          "caption": null
+        },
+        {
+          "src": "/images/finger-knitting/closeup.jpg",
+          "alt": "Close-up of hands looping pink yarn while finger knitting",
+          "caption": null
+        },
+        {
+          "src": "/images/finger-knitting/working.jpg",
+          "alt": "Rithu working on a long finger-knitted chain of pink yarn",
+          "caption": null
+        }
+      ],
+      "reflection": null
+    }
+  ]
 }
