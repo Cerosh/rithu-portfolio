@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — placeholder palette, to be confirmed once the resume and
+ * any photos are reviewed and a final visual concept is chosen (see brief:
+ * "Blueprint + Life" / "Building the Future" / "Curiosity in Motion").
+ *
+ * Direction: light, warm-paper background (not a dark "engineering
+ * console"); one confident technical ink color instead of default
+ * "engineering blue"; one warm accent; one bright highlight used sparingly
+ * for emphasis (animated numbers, active states). Three-role type system:
+ * Space Grotesk (display/headings — geometric, a little playful), Inter
+ * (body — highly readable), JetBrains Mono (dates, tags, "evidence" labels).
+ */
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-warm-soft: var(--accent-warm-soft);
+  --color-accent-bright: var(--accent-bright);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Fluid type scale (mobile -> desktop clamp()) */
+  --text-display: clamp(2.75rem, 1.9rem + 3.6vw, 5rem);
+  --text-display--font-weight: 600;
+  --text-h1: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  --text-h1--font-weight: 600;
+  --text-h2: clamp(1.5rem, 1.3rem + 0.8vw, 2.25rem);
+  --text-h2--font-weight: 600;
+  --text-h3: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
+  --text-h3--font-weight: 600;
+  --text-body-lg: clamp(1.1rem, 1.03rem + 0.3vw, 1.25rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--letter-spacing: 0.08em;
+}
+
+:root {
+  --paper: #faf7f2; /* warm off-white, not clinical white */
+  --paper-raised: #f1ece2; /* cards / placeholders sit slightly darker */
+  --ink: #1f2a2b; /* deep slate-teal, technical but not "engineering blue" */
+  --ink-soft: #52605f;
+  --ink-faint: #8a938e;
+  --line: #ddd4c4; /* warm neutral hairline, blueprint-adjacent */
+  --line-strong: #c9bda5;
+  --accent-warm: #c1592f; /* clay/terracotta */
+  --accent-warm-soft: #f1ded3;
+  --accent-bright: #e8a333; /* citrus highlight, used sparingly */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--accent-warm-soft);
+  color: var(--ink);
+}

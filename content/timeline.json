@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "year-9",
+      "stage": "Year 9",
+      "year": null,
+      "status": "current",
+      "headline": null,
+      "description": null
+    },
+    {
+      "id": "year-10",
+      "stage": "Year 10",
+      "year": null,
+      "status": "upcoming",
+      "headline": null,
+      "description": null
+    },
+    {
+      "id": "year-11",
+      "stage": "Year 11",
+      "year": null,
+      "status": "upcoming",
+      "headline": null,
+      "description": null
+    },
+    {
+      "id": "year-12",
+      "stage": "Year 12",
+      "year": null,
+      "status": "upcoming",
+      "headline": null,
+      "description": null
+    },
+    {
+      "id": "university",
+      "stage": "University",
+      "year": null,
+      "status": "upcoming",
+      "headline": null,
+      "description": null
+    }
+  ]
+}
