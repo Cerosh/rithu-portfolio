@@ -84,7 +84,12 @@
       "whoItHelped": "Gave students a shared lunchtime activity, and a lighthearted way into music and culture beyond their own.",
       "whatChanged": "Turned an ordinary lunch break into a packed, competitive celebration of music from around the world.",
       "whatSheLearned": null,
-      "images": []
+      "images": [
+        {
+          "src": "/images/music-trivia/hosting-portrait.jpg",
+          "alt": "Rithu smiling and holding a microphone while hosting the International Music Trivia Challenge"
+        }
+      ]
     },
     {
       "id": "house-captain",
