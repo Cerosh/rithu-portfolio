@@ -1,4 +1,5 @@
 import { Container } from "@/components/common/Container";
+import { GeometryMusicField } from "@/components/common/GeometryMusicField";
 import { Reveal } from "@/components/common/Reveal";
 import { Tag } from "@/components/common/Tag";
 import { getProfile } from "@/lib/repositories/profile";
@@ -23,7 +24,11 @@ export function Hero() {
         }}
       />
 
-      <Container className="relative py-20 sm:py-28">
+      {/* Geometric shapes drifting with a smaller number of music marks —
+          decorative only. See components/common/GeometryMusicField.tsx. */}
+      <GeometryMusicField />
+
+      <Container className="relative z-10 py-20 sm:py-28">
         <Reveal>
           <p className="font-mono text-eyebrow tracking-wide text-accent-warm uppercase">
             {profile.gradeLabel} &middot; {profile.location}
