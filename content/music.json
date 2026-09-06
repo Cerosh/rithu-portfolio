@@ -23,7 +23,13 @@
       "dateLabel": null,
       "description": "I've also performed with a number of different bands — details to come.",
       "reflection": null,
-      "images": [],
+      "images": [
+        {
+          "src": "/images/various-bands/poster.jpg",
+          "alt": "Rithu playing violin on stage alongside a band of other student musicians on saxophone, flute, and clarinet",
+          "caption": null
+        }
+      ],
       "video": {
         "src": "/videos/various-bands/performance.mp4"
       }
