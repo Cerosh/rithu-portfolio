@@ -30,14 +30,26 @@ function Reflection({ reflection }: { reflection: string | null }) {
 }
 
 // A featured, larger story card — for entries that carry more weight than a
-// single performance (e.g. an activity she organised for other people), so
-// it reads as "a small story from her life" rather than an achievement badge.
+// single performance (e.g. an activity she organised, or a video of her
+// performing), so it reads as "a small story from her life" rather than an
+// achievement badge.
 function FeaturedEntry({ entry }: { entry: MusicEntry }) {
   const [hero, supporting] = entry.images;
 
   return (
     <article className="overflow-hidden rounded-2xl border border-line bg-paper">
-      {hero?.src ? (
+      {entry.video?.src ? (
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          poster={hero?.src ?? undefined}
+          aria-label={hero?.alt ?? entry.title}
+          className="aspect-video w-full bg-ink"
+        >
+          <source src={entry.video.src} type="video/mp4" />
+        </video>
+      ) : hero?.src ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={hero.src} alt={hero.alt} className="aspect-[21/9] w-full object-cover" />
       ) : (
@@ -59,24 +71,31 @@ function FeaturedEntry({ entry }: { entry: MusicEntry }) {
         </div>
         <h3 className="font-display mt-2 text-h3 text-ink">{entry.title}</h3>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_220px]">
-          <div>
+        {supporting ? (
+          <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_220px]">
+            <div>
+              <p className="text-body-lg text-ink-soft">{entry.description}</p>
+              <Reflection reflection={entry.reflection} />
+            </div>
+            <div>
+              {supporting.src ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={supporting.src}
+                  alt={supporting.alt}
+                  className="aspect-[4/5] w-full rounded-xl border border-line object-cover"
+                />
+              ) : (
+                <PlaceholderImage label={supporting.alt} aspect="aspect-[4/5]" />
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="mt-6 max-w-2xl">
             <p className="text-body-lg text-ink-soft">{entry.description}</p>
             <Reflection reflection={entry.reflection} />
           </div>
-          <div>
-            {supporting?.src ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={supporting.src}
-                alt={supporting.alt}
-                className="aspect-[4/5] w-full rounded-xl border border-line object-cover"
-              />
-            ) : (
-              <PlaceholderImage label={supporting?.alt ?? "[Add supporting photo]"} aspect="aspect-[4/5]" />
-            )}
-          </div>
-        </div>
+        )}
       </div>
     </article>
   );
@@ -121,8 +140,9 @@ function CompactEntry({ entry }: { entry: MusicEntry }) {
 // and community, not a résumé line ("Violin — Grade X") (brief §2).
 export function Music() {
   const { intro, items } = getMusic();
-  const featured = items.filter((entry) => entry.type === "community");
-  const standard = items.filter((entry) => entry.type !== "community");
+  const isFeatured = (entry: MusicEntry) => entry.video !== null || entry.images.length > 1;
+  const featured = items.filter(isFeatured);
+  const standard = items.filter((entry) => !isFeatured(entry));
 
   return (
     <section

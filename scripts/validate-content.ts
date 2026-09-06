@@ -73,6 +73,18 @@ if (missingImages.length > 0) {
   console.log("✔ all local image paths resolve to a real file");
 }
 
+const missingVideos = getMusic()
+  .items.filter((m) => m.video && m.video.src.startsWith("/") && !fileExists(m.video.src))
+  .map((m) => `music "${m.title}": ${m.video!.src}`);
+
+if (missingVideos.length > 0) {
+  failed = true;
+  console.error(`✘ video files missing on disk (${missingVideos.length}):`);
+  for (const entry of missingVideos) console.error(`  - ${entry}`);
+} else {
+  console.log("✔ all local video paths resolve to a real file");
+}
+
 const resume = getResume();
 if (resume.fileSrc && resume.fileSrc.startsWith("/") && !fileExists(resume.fileSrc)) {
   failed = true;

@@ -72,6 +72,14 @@ export const musicEntrySchema = z.object({
   description: z.string().min(1),
   reflection: z.string().min(1).nullable(),
   images: z.array(imageSchema).default([]),
+  // Optional video for an entry — images[0] doubles as the poster frame, so
+  // the video itself is never fetched until a visitor presses play.
+  video: z
+    .object({
+      src: z.string().min(1),
+    })
+    .nullable()
+    .default(null),
 });
 
 export const musicFileSchema = z.object({

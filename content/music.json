@@ -1,6 +1,24 @@
 {
-  "intro": null,
+  "intro": "Some of this is quiet practice. Some of it is standing in front of people.",
   "items": [
+    {
+      "id": "ponnonam-2026-performance",
+      "title": "On Stage at Ponnonam 2026",
+      "type": "performance",
+      "dateLabel": "22 August 2026",
+      "description": "On 22 August 2026, I performed violin at Ponnonam 2026, a community cultural event — playing alongside another musician on percussion, in front of a live audience.",
+      "reflection": null,
+      "images": [
+        {
+          "src": "/images/ponnonam-2026/performance-hero.jpg",
+          "alt": "Rithu playing violin on stage next to another musician playing hand percussion, in front of a \"Ponnonam 2026\" banner",
+          "caption": null
+        }
+      ],
+      "video": {
+        "src": "/videos/ponnonam-2026/performance.mp4"
+      }
+    },
     {
       "id": "music-trivia-challenge",
       "title": "All Around the World: Music Trivia",
