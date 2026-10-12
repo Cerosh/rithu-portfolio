@@ -18,6 +18,10 @@ const imageSchema = z.object({
 
 export const profileSchema = z.object({
   firstName: z.string().min(1),
+  // Full name — used where the site introduces her by her complete name
+  // (currently just the Hero heading); nav/footer/page-title keep using the
+  // shorter firstName.
+  fullName: z.string().min(1),
   gradeLabel: z.string().min(1), // e.g. "Year 9"
   location: z.string().min(1), // city-level only, e.g. "Sydney, Australia"
   tagline: z.string().min(1).nullable(),
@@ -121,8 +125,19 @@ export const leadershipEntrySchema = z.object({
   dateLabel: z.string().min(1).nullable(),
   whatSheDid: z.string().min(1).nullable(),
   whoItHelped: z.string().min(1).nullable(),
-  whatChanged: z.string().min(1).nullable(),
   whatSheLearned: z.string().min(1).nullable(),
+  // Optional sub-stages within a single role/story (e.g. a "Start" update
+  // and a later "End" update for the same program) — rendered as labelled
+  // subheadings inside the one card instead of splitting into separate
+  // leadership entries. Most entries have none.
+  updates: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        body: z.string().min(1),
+      }),
+    )
+    .default([]),
   // Optional evidence photo(s) — most entries have none; the few stories
   // with real photographic evidence (a mentoring session, an event she ran)
   // get one hero image, not a gallery.
@@ -130,6 +145,23 @@ export const leadershipEntrySchema = z.object({
 });
 
 export const leadershipFileSchema = z.object({
+  intro: z.string().min(1).nullable(),
+  items: z.array(leadershipEntrySchema).default([]),
+});
+
+// Private Tutoring — pulled out of the main Leadership list into its own
+// section while the overall page layout is still being reworked. Reuses the
+// leadership entry shape since it's the same kind of story (role, who it
+// helped, what she learned).
+export const tutoringFileSchema = z.object({
+  entry: leadershipEntrySchema.nullable(),
+});
+
+// Library Monitor projects — things she devised/ran as a Library Monitor
+// (e.g. the Book Blurb Challenge), shown as the first subsection in
+// Projects rather than inside the main Leadership list. Reuses the
+// leadership entry shape since it's the same kind of story.
+export const libraryMonitorProjectsFileSchema = z.object({
   intro: z.string().min(1).nullable(),
   items: z.array(leadershipEntrySchema).default([]),
 });
@@ -173,6 +205,20 @@ export const futureSchema = z.object({
   images: z.array(imageSchema).default([]),
 });
 
+// A simple photo gallery of pictures she's taken herself — no narrative
+// fields, just the image and a short factual caption (what's in the shot,
+// not a story about it).
+export const photographyPhotoSchema = z.object({
+  id: z.string().min(1),
+  image: imageSchema,
+  dateLabel: z.string().min(1).nullable(),
+});
+
+export const photographyFileSchema = z.object({
+  intro: z.string().min(1).nullable(),
+  items: z.array(photographyPhotoSchema).default([]),
+});
+
 export const timelineStageSchema = z.object({
   id: z.string().min(1),
   stage: z.string().min(1), // e.g. "Year 9"
@@ -180,6 +226,10 @@ export const timelineStageSchema = z.object({
   status: z.enum(["past", "current", "upcoming"]),
   headline: z.string().min(1).nullable(),
   description: z.string().min(1).nullable(),
+  // Short, named things done during this stage (e.g. "Book Blurb
+  // Challenge") — rendered as a list of small headings under the stage,
+  // rather than folded into one run-on description sentence.
+  highlights: z.array(z.string().min(1)).default([]),
 });
 
 export const timelineFileSchema = z.object({
@@ -221,10 +271,14 @@ export type MusicEntry = z.infer<typeof musicEntrySchema>;
 export type MusicFile = z.infer<typeof musicFileSchema>;
 export type LeadershipEntry = z.infer<typeof leadershipEntrySchema>;
 export type LeadershipFile = z.infer<typeof leadershipFileSchema>;
+export type TutoringFile = z.infer<typeof tutoringFileSchema>;
+export type LibraryMonitorProjectsFile = z.infer<typeof libraryMonitorProjectsFileSchema>;
 export type BeyondItem = z.infer<typeof beyondItemSchema>;
 export type BeyondFile = z.infer<typeof beyondFileSchema>;
 export type GrowingEntry = z.infer<typeof growingEntrySchema>;
 export type GrowingFile = z.infer<typeof growingFileSchema>;
+export type PhotographyPhoto = z.infer<typeof photographyPhotoSchema>;
+export type PhotographyFile = z.infer<typeof photographyFileSchema>;
 export type Future = z.infer<typeof futureSchema>;
 export type TimelineStage = z.infer<typeof timelineStageSchema>;
 export type TimelineFile = z.infer<typeof timelineFileSchema>;

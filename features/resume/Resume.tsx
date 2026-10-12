@@ -3,12 +3,17 @@ import { Container } from "@/components/common/Container";
 import { Reveal } from "@/components/common/Reveal";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { getResume } from "@/lib/repositories/resume";
+import { formatDateDMY } from "@/lib/utils";
 
 export function Resume() {
   const resume = getResume();
 
   return (
-    <section id="resume" className="scroll-mt-16 border-t border-line bg-paper-raised py-20 sm:py-28">
+    <section
+      id="resume"
+      className="scroll-mt-16 border-t border-line py-20 sm:py-28"
+      style={{ background: "linear-gradient(180deg, #873e3e 0%, #7d3a39 100%)" }}
+    >
       <Container className="max-w-3xl text-center">
         <SectionHeading eyebrow="Resume" title="A clean, downloadable resume" align="center" />
 
@@ -28,7 +33,9 @@ export function Resume() {
             </p>
           )}
           {resume.lastUpdated ? (
-            <p className="font-mono text-small text-ink-faint">Last updated {resume.lastUpdated}</p>
+            <p className="font-mono text-small text-ink-faint">
+              Last updated {formatDateDMY(resume.lastUpdated)}
+            </p>
           ) : null}
         </Reveal>
       </Container>

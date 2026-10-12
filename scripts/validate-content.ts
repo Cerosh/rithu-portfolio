@@ -11,7 +11,10 @@ import { getBooks } from "@/lib/repositories/books";
 import { getProjects } from "@/lib/repositories/projects";
 import { getMusic } from "@/lib/repositories/music";
 import { getLeadership } from "@/lib/repositories/leadership";
+import { getTutoring } from "@/lib/repositories/tutoring";
+import { getLibraryMonitorProjects } from "@/lib/repositories/library-monitor-projects";
 import { getBeyond } from "@/lib/repositories/beyond";
+import { getPhotography } from "@/lib/repositories/photography";
 import { getGrowing } from "@/lib/repositories/growing";
 import { getFuture } from "@/lib/repositories/future";
 import { getTimeline } from "@/lib/repositories/timeline";
@@ -39,7 +42,10 @@ const checks: Array<[string, () => unknown[] | object]> = [
   ["projects.json", getProjects],
   ["music.json", getMusic],
   ["leadership.json", getLeadership],
+  ["tutoring.json", getTutoring],
+  ["library-monitor-projects.json", getLibraryMonitorProjects],
   ["beyond.json", getBeyond],
+  ["photography.json", getPhotography],
   ["growing.json", getGrowing],
   ["future.json", getFuture],
   ["timeline.json", getTimeline],
@@ -76,6 +82,11 @@ const missingImages = [
   ...getMusic().items.flatMap((m) => checkImagePaths(`music "${m.title}"`, m.images)),
   ...getBeyond().items.flatMap((b) => checkImagePaths(`beyond "${b.title}"`, b.images)),
   ...getLeadership().items.flatMap((l) => checkImagePaths(`leadership "${l.role}"`, l.images)),
+  ...checkImagePaths("tutoring", getTutoring().entry?.images ?? []),
+  ...getLibraryMonitorProjects().items.flatMap((l) =>
+    checkImagePaths(`library monitor project "${l.role}"`, l.images),
+  ),
+  ...checkImagePaths("photography", getPhotography().items.map((p) => p.image)),
   ...checkImagePaths("future", getFuture().images),
   ...getBooks().reviews.flatMap((r) =>
     checkImagePaths(`book review "${r.bookTitle}"`, r.image ? [r.image] : []),

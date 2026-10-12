@@ -1,19 +1,23 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Dancing_Script, Jost, JetBrains_Mono } from "next/font/google";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { getProfile } from "@/lib/repositories/profile";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+// Headings — a calligraphy/script style, per Rithu's request.
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+// Body copy — "Century Gothic" itself isn't licensed for web embedding /
+// not on Google Fonts, so Jost (a free geometric-sans font commonly used as
+// a Century Gothic substitute, very close in shape) stands in for it.
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
   display: "swap",
 });
@@ -40,9 +44,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${dancingScript.variable} ${jost.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body id="top" className="flex min-h-screen flex-col bg-paper font-sans text-ink">
+      <body
+        id="top"
+        className="flex min-h-screen flex-col bg-paper font-sans text-ink"
+        suppressHydrationWarning
+      >
         <a
           href="#main"
           className="sr-only rounded-md bg-ink px-4 py-2 text-paper focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100]"

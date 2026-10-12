@@ -1,0 +1,37 @@
+{
+  "intro": "As part of the library monitor team, I've had to host various activities in the library — including a creative writing challenge and a blurb match challenge for Book Week, and more. Out of the seven activities I've hosted so far, one of my favourites is the International Music Trivia Challenge, which ran while the school was celebrating Multicultural Week. Being a host has taught me skills like organisation and time management. Organisation matters because a host needs to stay organised to run their activity within the time frame, which leads to the second skill — time management, which has taught me how to keep explanations short and to the point, so there's more time for the activity itself and students can still enjoy their lunch and recess.",
+  "items": [
+    {
+      "id": "book-blurb-challenge",
+      "role": "Devised & Ran the Book Blurb Challenge",
+      "organisation": "School Library",
+      "dateLabel": "Year 9",
+      "whatSheDid": "Came up with a book-blurb matching competition, then organised and ran it for the whole school — three fast-paced rounds where teams raced to match book covers to their blurbs. It came right down to the final round, with a block of Cadbury chocolate on the line.",
+      "whoItHelped": "Turned an ordinary lunchtime into a genuinely competitive event for the school's book-loving crowd.",
+      "whatSheLearned": null,
+      "updates": [],
+      "images": [
+        {
+          "src": "/images/book-blurb-challenge/hero.jpg",
+          "alt": "Rithu holding up a book beside a sign reading 'The Blurb Challenge', with a teammate holding a block of Cadbury Dairy Milk chocolate"
+        }
+      ]
+    },
+    {
+      "id": "music-trivia-host",
+      "role": "Host, International Music Trivia Challenge",
+      "organisation": "Multicultural Week",
+      "dateLabel": "Year 9",
+      "whatSheDid": "Put together and hosted a music trivia challenge for the whole school during Multicultural Week — choosing the songs, building the slides, and running the competition from the front of the room with a microphone. Turned an ordinary lunch break into a packed, competitive celebration of music from around the world.",
+      "whoItHelped": "Gave students a shared lunchtime activity, and a lighthearted way into music and culture beyond their own.",
+      "whatSheLearned": null,
+      "updates": [],
+      "images": [
+        {
+          "src": "/images/music-trivia/hosting-portrait.jpg",
+          "alt": "Rithu smiling and holding a microphone while hosting the International Music Trivia Challenge"
+        }
+      ]
+    }
+  ]
+}

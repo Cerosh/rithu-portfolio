@@ -21,35 +21,73 @@ export function Growing() {
   const { intro, items: reflections } = getGrowing();
 
   return (
-    <section id="growing" className="scroll-mt-16 border-t border-line bg-paper-raised py-20 sm:py-28">
-      <Container>
-        <SectionHeading eyebrow="Still growing" title="Where I am, and where I'm headed" subtitle={intro} />
+    <section
+      id="growing"
+      className="scroll-mt-16 relative overflow-hidden border-t border-line py-20 sm:py-28"
+      style={{ background: "linear-gradient(180deg, #9b4746 0%, #914342 100%)" }}
+    >
+      {/* Soft burgundy splash — decorative only */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-20"
+        style={{
+          background: "radial-gradient(50% 40% at 94% 80%, var(--burgundy), transparent 70%)",
+        }}
+      />
 
-        <ol className="mt-12 grid gap-6 sm:grid-cols-5">
+      <Container className="relative">
+        <SectionHeading
+          eyebrow="Still growing"
+          title="What I have done so far and what I will be doing"
+          subtitle={intro}
+        />
+
+        <ol className="mt-12 space-y-10">
           {stages.map((stage, index) => (
             <Reveal key={stage.id} delay={index * 0.05}>
-              <li className="flex flex-col gap-2">
-                <div
-                  className={cn(
-                    "h-2 w-full rounded-full",
-                    stage.status === "current" && "bg-accent-warm",
-                    stage.status === "past" && "bg-ink-faint",
-                    stage.status === "upcoming" && "bg-line",
-                  )}
-                  aria-hidden="true"
-                />
-                <p
-                  className={cn(
-                    "font-mono text-small",
-                    stage.status === "current" ? "text-ink" : "text-ink-faint",
-                  )}
-                >
-                  {stage.stage}
-                  {stage.status === "current" ? " (now)" : ""}
-                </p>
-                <p className="text-small text-ink-soft">
-                  {stage.headline ?? "[Add what happens at this stage]"}
-                </p>
+              <li className="grid grid-cols-[auto_1fr] gap-4">
+                <div className="flex flex-col items-center">
+                  <span
+                    className={cn(
+                      "h-3 w-3 shrink-0 rounded-full",
+                      stage.status === "current" && "bg-accent-warm",
+                      stage.status === "past" && "bg-ink-faint",
+                      stage.status === "upcoming" && "bg-line",
+                    )}
+                    aria-hidden="true"
+                  />
+                  {index < stages.length - 1 ? (
+                    <span className="mt-1 w-px flex-1 bg-line" aria-hidden="true" />
+                  ) : null}
+                </div>
+
+                <div className="pb-2">
+                  <p
+                    className={cn(
+                      "font-mono text-small",
+                      stage.status === "current" ? "text-ink" : "text-ink-faint",
+                    )}
+                  >
+                    {stage.stage}
+                    {stage.status === "current" ? " (now)" : ""}
+                  </p>
+                  {stage.headline ? (
+                    <p className="mt-1 text-body text-ink-soft">{stage.headline}</p>
+                  ) : null}
+
+                  {stage.highlights.length > 0 ? (
+                    <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                      {stage.highlights.map((highlight, highlightIndex) => (
+                        <li
+                          key={highlightIndex}
+                          className="rounded-lg border border-line bg-paper px-3 py-2 font-mono text-small text-ink"
+                        >
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
               </li>
             </Reveal>
           ))}

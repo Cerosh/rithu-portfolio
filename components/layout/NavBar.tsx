@@ -7,11 +7,9 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
-  { href: "#curiosity", label: "Curious About" },
+  { href: "#leadership", label: "In School Leadership" },
   { href: "#projects", label: "Projects" },
-  { href: "#music", label: "Music" },
-  { href: "#leadership", label: "Leadership" },
-  { href: "#beyond", label: "Beyond School" },
+  { href: "#out-of-school-leadership", label: "Out of School Leadership" },
   { href: "#growing", label: "Growing" },
   { href: "#future", label: "My Future" },
   { href: "#resume", label: "Resume" },

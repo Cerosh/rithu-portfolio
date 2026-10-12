@@ -1,10 +1,8 @@
 import { Hero } from "@/features/hero/Hero";
 import { About } from "@/features/about/About";
-import { Curiosity } from "@/features/curiosity/Curiosity";
-import { Projects } from "@/features/projects/Projects";
-import { Music } from "@/features/music/Music";
 import { Leadership } from "@/features/leadership/Leadership";
-import { Beyond } from "@/features/beyond/Beyond";
+import { Projects } from "@/features/projects/Projects";
+import { OutOfSchoolLeadership } from "@/features/out-of-school-leadership/OutOfSchoolLeadership";
 import { Growing } from "@/features/growing/Growing";
 import { Future } from "@/features/future/Future";
 import { Resume } from "@/features/resume/Resume";
@@ -15,11 +13,9 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Curiosity />
-      <Projects />
-      <Music />
       <Leadership />
-      <Beyond />
+      <Projects />
+      <OutOfSchoolLeadership />
       <Growing />
       <Future />
       <Resume />

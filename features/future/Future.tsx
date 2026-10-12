@@ -12,8 +12,21 @@ export function Future() {
   const future = getFuture();
 
   return (
-    <section id="future" className="scroll-mt-16 border-t border-line py-20 sm:py-28">
-      <Container className="max-w-3xl">
+    <section
+      id="future"
+      className="scroll-mt-16 relative overflow-hidden border-t border-line py-20 sm:py-28"
+      style={{ background: "linear-gradient(180deg, #914342 0%, #873e3e 100%)" }}
+    >
+      {/* Soft burgundy splash — decorative only */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-20"
+        style={{
+          background: "radial-gradient(45% 35% at 8% 15%, var(--burgundy), transparent 70%)",
+        }}
+      />
+
+      <Container className="relative">
         <SectionHeading eyebrow="Looking ahead" title="My future (so far)" />
 
         {future.images.length > 0 ? (

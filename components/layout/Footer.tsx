@@ -1,3 +1,4 @@
+import { AnimatedLogo } from "@/components/common/AnimatedLogo";
 import { Container } from "@/components/common/Container";
 
 // Deliberately minimal: a minor's site shouldn't surface an address, phone
@@ -8,7 +9,12 @@ export function Footer({ firstName }: { firstName: string }) {
 
   return (
     <footer className="border-t border-line py-10">
-      <Container className="flex flex-col items-center gap-2 text-center text-small text-ink-faint">
+      <Container className="flex flex-col items-center gap-4 text-center text-small text-ink-faint">
+        <AnimatedLogo
+          src="/images/logo/rithu-monogram.png"
+          alt={`${firstName}'s monogram — an "R" within a laurel wreath`}
+          className="h-36 w-36"
+        />
         <p>
           {firstName}&rsquo;s portfolio &middot; {year}
         </p>

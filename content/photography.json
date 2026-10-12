@@ -1,0 +1,95 @@
+{
+  "intro": null,
+  "items": [
+    {
+      "id": "wood-chips-mulch",
+      "image": {
+        "src": "/images/photography/wood-chips-mulch.jpg",
+        "alt": "Close-up black-and-white photo of wood chip mulch",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "white-daisies",
+      "image": {
+        "src": "/images/photography/white-daisies.jpg",
+        "alt": "Black-and-white photo of three white daisies against a dark background",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "weathered-wood-grain",
+      "image": {
+        "src": "/images/photography/weathered-wood-grain.jpg",
+        "alt": "Close-up black-and-white photo of weathered, cracked wood grain",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "seashells-still-life",
+      "image": {
+        "src": "/images/photography/seashells-still-life.jpg",
+        "alt": "Black-and-white still life of a spiral seashell with two smaller shells against a black background",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "succulent-close-up",
+      "image": {
+        "src": "/images/photography/succulent-close-up.jpg",
+        "alt": "Close-up photo of a dark red succulent plant with a green rosette at its centre",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "pigeon-on-stone-wall",
+      "image": {
+        "src": "/images/photography/pigeon-on-stone-wall.jpg",
+        "alt": "A pigeon with wings spread landing on a sandstone block wall beside a lawn",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "gravel-close-up",
+      "image": {
+        "src": "/images/photography/gravel-close-up.jpg",
+        "alt": "Close-up black-and-white photo of loose gravel and small stones",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "fabric-flower",
+      "image": {
+        "src": "/images/photography/fabric-flower.jpg",
+        "alt": "Close-up black-and-white photo of a layered fabric flower",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "hairy-green-leaves",
+      "image": {
+        "src": "/images/photography/hairy-green-leaves.jpg",
+        "alt": "Close-up photo of fuzzy green leaves and a budding shoot at the centre of a plant",
+        "caption": null
+      },
+      "dateLabel": null
+    },
+    {
+      "id": "dried-flower-heads",
+      "image": {
+        "src": "/images/photography/dried-flower-heads.jpg",
+        "alt": "Close-up photo of dried, withered flower heads on long stems against a blurred background",
+        "caption": null
+      },
+      "dateLabel": null
+    }
+  ]
+}

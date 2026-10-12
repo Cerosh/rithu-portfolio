@@ -4,29 +4,31 @@
     {
       "id": "primary-prosperitas",
       "role": "Primary Prosperitas",
-      "organisation": null,
-      "dateLabel": "April 2026 – Present",
-      "whatSheDid": "Mentoring students from Barnier, Hambledon, Nirimba Fields and Quakers Hill Public Schools through the 2026 Primary Prosperitas program — helping them shape a personal interest project, work out their own driving question, and set goals for it.",
+      "organisation": "Hambledon Public School, Quakers Hill East Public School, Barnier Public School, Quakers Hill Public School, Nirimba Fields Public School",
+      "dateLabel": "April 2026 – October 2026",
+      "whatSheDid": null,
       "whoItHelped": "Younger primary students working through a big project of their own for the first time.",
-      "whatChanged": null,
-      "whatSheLearned": null,
+      "whatSheLearned": "Primary Prosperitas has helped me understand how to deal with different obstacles that come up across different situations. I've learned foundational project management skills like scheduling and time tracking, which help me finish projects efficiently.",
+      "updates": [
+        {
+          "label": "Primary Prosperitas -Start",
+          "body": "Mentoring students from Barnier, Hambledon, Nirimba Fields and Quakers Hill Public Schools through the 2026 Primary Prosperitas program — helping them shape a personal interest project, work out their own driving question, and set goals for it."
+        },
+        {
+          "label": "Primary Prosperitas - End",
+          "body": "Our mentors and mentees came together for their final session before presenting their projects in Week 1 of Term 4. With presentation day fast approaching, students used the session to fine-tune their ideas, strengthen their delivery and make those final improvements to their projects. There was a wonderful sense of focus and purpose in the room as mentors supported their mentees and students prepared to share their work."
+        }
+      ],
       "images": [
         {
           "src": "/images/primary-prosperitas/mentoring-hero.jpg",
           "alt": "Rithu sitting across a table from a primary school mentee, going through a worksheet together in the library"
+        },
+        {
+          "src": "/images/primary-prosperitas/mentors-and-mentee-portrait.jpg",
+          "alt": "Rithu and her primary school mentee sitting side by side in the library, each wearing a name badge, with a laptop and an open project folder on the table between them"
         }
       ]
-    },
-    {
-      "id": "private-tutoring",
-      "role": "Private Tutoring",
-      "organisation": null,
-      "dateLabel": "April 2026 – Present",
-      "whatSheDid": "Providing one-on-one support to students who want extra help getting ahead in their schoolwork.",
-      "whoItHelped": "Students looking for support outside of regular class time.",
-      "whatChanged": null,
-      "whatSheLearned": null,
-      "images": []
     },
     {
       "id": "src",
@@ -35,8 +37,7 @@
       "dateLabel": "January 2026 – Present",
       "whatSheDid": "Helping bring students' suggestions to the school and contributing to changes that affect everyone, including through Mini Vinnies. Being part of the SRC has also meant a full Leadership Day of workshops on public speaking, critical thinking and problem-solving, alongside smaller team moments like the SRC's Valentine's Day rose deliveries around the school.",
       "whoItHelped": "Fellow students, by giving them a voice in decisions that affect the school.",
-      "whatChanged": null,
-      "whatSheLearned": null,
+      "whatSheLearned": "The Student Representative Council helped me learn practical leadership skills like how to advocate for my peers, and teamwork and communication. Being part of the SRC helped me build on being an advocate for my peers, because as a school student I can put myself in the shoes of my peers so that I can be the voice for the students and help bring change to the school. By being in the SRC I learnt the importance of teamwork, because teamwork is what pushes the SRC to make changes, negotiate solutions, and share peer feedback.",
       "images": [
         {
           "src": "/images/src/leadership-day.jpg",
@@ -50,46 +51,13 @@
       "role": "Library Monitor",
       "organisation": null,
       "dateLabel": "January 2025 – Present",
-      "whatSheDid": "Helping students find books, running library activities, and writing book reviews for the library's own review series, The Library Lowdown.",
-      "whoItHelped": "Students looking for their next read.",
-      "whatChanged": "Recognised in the school's 2025 Library Crew celebration and awarded a Certificate of School Service for her contribution as a Library Monitor, now in her second year in the role.",
-      "whatSheLearned": null,
+      "whatSheDid": "Helping students find books, running library activities, and writing book reviews for the library's own review series, The Library Lowdown. Recognised in the school's 2025 Library Crew celebration and awarded a Certificate of School Service for her contribution as a Library Monitor, now in her second year in the role.",
+      "whoItHelped": "Students looking for their next read. Creating activities that students can enjoy during lunch and recess.",
+      "whatSheLearned": "Being a library monitor helped me build skills like responsibility and basic public speaking. Library monitors aren't meant to stay only in the library — they're also involved in the wider school community, like helping Year 6 students transition smoothly from primary to high school. Whilst helping the Year 6 students transition, I learnt to deliver information to a large crowd of students, teachers and parents, and how to manage a large crowd.",
       "images": [
         {
           "src": "/images/library-monitor/certificate.jpg",
           "alt": "Rithu holding her 2025 Certificate of School Service, awarded for being a QHHS Library Monitor"
-        }
-      ]
-    },
-    {
-      "id": "book-blurb-challenge",
-      "role": "Devised & Ran the Book Blurb Challenge",
-      "organisation": "School Library",
-      "dateLabel": "Year 9",
-      "whatSheDid": "Came up with a book-blurb matching competition, then organised and ran it for the whole school — three fast-paced rounds where teams raced to match book covers to their blurbs.",
-      "whoItHelped": "Turned an ordinary lunchtime into a genuinely competitive event for the school's book-loving crowd.",
-      "whatChanged": "It came right down to the final round, with a block of Cadbury chocolate on the line.",
-      "whatSheLearned": null,
-      "images": [
-        {
-          "src": "/images/book-blurb-challenge/hero.jpg",
-          "alt": "Rithu holding up a book beside a sign reading 'The Blurb Challenge', with a teammate holding a block of Cadbury Dairy Milk chocolate"
-        }
-      ]
-    },
-    {
-      "id": "music-trivia-host",
-      "role": "Host, International Music Trivia Challenge",
-      "organisation": "Multicultural Week",
-      "dateLabel": "Year 9",
-      "whatSheDid": "Put together and hosted a music trivia challenge for the whole school during Multicultural Week — choosing the songs, building the slides, and running the competition from the front of the room with a microphone.",
-      "whoItHelped": "Gave students a shared lunchtime activity, and a lighthearted way into music and culture beyond their own.",
-      "whatChanged": "Turned an ordinary lunch break into a packed, competitive celebration of music from around the world.",
-      "whatSheLearned": null,
-      "images": [
-        {
-          "src": "/images/music-trivia/hosting-portrait.jpg",
-          "alt": "Rithu smiling and holding a microphone while hosting the International Music Trivia Challenge"
         }
       ]
     },
@@ -100,8 +68,7 @@
       "dateLabel": "January 2023 – December 2023",
       "whatSheDid": "I enjoyed when I got to go into every classroom to get the tokens. At the end of each term all the tokens will be weighed and then the house that has the most weight will win and receive whatever the house decided as their reward.",
       "whoItHelped": "The wider school community.",
-      "whatChanged": null,
-      "whatSheLearned": null,
+      "whatSheLearned": "This leadership role has taught me and helped me to see the different sides of leadership. Being a House Minister has helped me build skills like basic public speaking, crowd management, being an advocate for my peers, and having strong communication. From this role I've learnt how to be more confident speaking to a large crowd of known and unknown people, how to manage a noisy crowd, and how to put into action the different changes that students want to see implemented in the school.",
       "images": [
         {
           "src": "/images/house-captain/house-ministers-portrait.jpg",

@@ -1,8 +1,10 @@
+import { AnimatedSignature } from "@/components/common/AnimatedSignature";
 import { Container } from "@/components/common/Container";
 import { GeometryMusicField } from "@/components/common/GeometryMusicField";
 import { Reveal } from "@/components/common/Reveal";
 import { Tag } from "@/components/common/Tag";
 import { getProfile } from "@/lib/repositories/profile";
+import { getSignature } from "@/lib/signature";
 
 // The first screen of the story: who she is, where she is now, what excites
 // her, and where she might be going — without pinning down a fixed career.
@@ -10,9 +12,23 @@ import { getProfile } from "@/lib/repositories/profile";
 // invented.
 export function Hero() {
   const profile = getProfile();
+  const signature = getSignature(profile.fullName);
 
   return (
-    <section className="relative overflow-hidden border-b border-line">
+    <section
+      className="relative overflow-hidden border-b border-line"
+      style={{ background: "linear-gradient(180deg, #cd5c5c 0%, #c35858 100%)" }}
+    >
+      {/* Soft burgundy splash — decorative only */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-25"
+        style={{
+          background:
+            "radial-gradient(55% 45% at 88% 12%, var(--burgundy), transparent 70%), radial-gradient(45% 40% at 6% 95%, var(--burgundy), transparent 70%)",
+        }}
+      />
+
       {/* Faint blueprint-style grid — decorative only */}
       <div
         aria-hidden="true"
@@ -33,9 +49,11 @@ export function Hero() {
           <p className="font-mono text-eyebrow tracking-wide text-accent-warm uppercase">
             {profile.gradeLabel} &middot; {profile.location}
           </p>
-          <h1 className="font-display mt-4 max-w-3xl text-display text-ink">
-            {profile.firstName}
-          </h1>
+          <AnimatedSignature
+            signature={signature}
+            label={profile.fullName}
+            className="mt-4 text-ink"
+          />
           <p className="mt-6 max-w-2xl text-body-lg text-ink-soft">
             {profile.tagline ??
               "[Add tagline — a one-line sense of who she is, drawn from her own words]"}
