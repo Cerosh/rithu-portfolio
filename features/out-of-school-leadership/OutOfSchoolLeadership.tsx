@@ -25,9 +25,9 @@ const TYPE_ICON: Record<string, string> = {
 };
 
 const TUTORING_FIELDS: Array<{ key: keyof LeadershipEntry; label: string }> = [
-  { key: "whatSheDid", label: "What she took on" },
+  { key: "whatSheDid", label: "What I took on" },
   { key: "whoItHelped", label: "Who it helped" },
-  { key: "whatSheLearned", label: "What she learned" },
+  { key: "whatSheLearned", label: "What I learned" },
 ];
 
 // Only renders when there's an actual reflection — no placeholder prompt.

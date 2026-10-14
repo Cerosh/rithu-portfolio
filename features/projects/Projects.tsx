@@ -26,7 +26,7 @@ const CATEGORY_EYEBROW: Record<string, string> = {
 };
 
 const ENTRY_FIELDS: Array<{ key: keyof LeadershipEntry; label: string }> = [
-  { key: "whatSheDid", label: "What she took on" },
+  { key: "whatSheDid", label: "What I took on" },
   { key: "whoItHelped", label: "Who it helped" },
 ];
 
@@ -114,7 +114,13 @@ function StoryItem({ item }: { item: BeyondItem }) {
             <img
               src={hero.src}
               alt={hero.alt}
-              className="aspect-[4/3] w-full object-cover sm:aspect-auto sm:h-full"
+              className={`w-full object-cover sm:aspect-auto sm:h-full ${
+                // Tall portrait photo — use a taller frame on mobile, anchored near the
+                // top, so both her head and the mandala stay in view.
+                item.id === "mandala-painting"
+                  ? "aspect-[4/5] object-[50%_5%]"
+                  : "aspect-[4/3]"
+              }`}
             />
           )
         ) : hero ? (

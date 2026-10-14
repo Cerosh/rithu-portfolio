@@ -8,9 +8,9 @@ import type { LeadershipEntry } from "@/lib/schemas/content";
 import { cn } from "@/lib/utils";
 
 const FIELDS: Array<{ key: keyof LeadershipEntry; label: string }> = [
-  { key: "whatSheDid", label: "What she took on" },
+  { key: "whatSheDid", label: "What I took on" },
   { key: "whoItHelped", label: "Who it helped" },
-  { key: "whatSheLearned", label: "What she learned" },
+  { key: "whatSheLearned", label: "What I learned" },
 ];
 
 // Per-entry image column width — Primary Prosperitas/SRC/Library Monitor
