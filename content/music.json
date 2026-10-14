@@ -3,7 +3,7 @@
   "items": [
     {
       "id": "ponnonam-2026-performance",
-      "title": "On Stage at Ponnonam 2026",
+      "title": "On Stage at Ponnonam 2026/Playing at Humsam",
       "type": "performance",
       "dateLabel": "22/08/2026",
       "description": "On 22/08/2026, I performed violin at Ponnonam 2026, a community cultural event — playing alongside another musician on percussion, in front of a live audience.",
@@ -22,6 +22,15 @@
       "type": "community",
       "dateLabel": "2022 – Present",
       "description": "Since 2022, I've been playing violin with my church's music ministry — a regular, ongoing way to use music for something bigger than just practising at home.",
+      "reflection": null,
+      "images": []
+    },
+    {
+      "id": "dancing-at-events",
+      "title": "Dancing at Various Events",
+      "type": "performance",
+      "dateLabel": "2022 – 2024",
+      "description": "I have performed across various events outside and inside of school, like Harmony Day in Year 5 and Year 6, Humsam, and a community gathering.",
       "reflection": null,
       "images": []
     }

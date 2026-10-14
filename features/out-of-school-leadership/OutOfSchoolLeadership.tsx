@@ -208,6 +208,7 @@ function TutoringCard({ entry }: { entry: LeadershipEntry }) {
 // sections (Music, and a standalone Private Tutoring section).
 const PONNONAM_ID = "ponnonam-2026-performance";
 const CHURCH_ID = "church-music-ministry";
+const DANCE_ID = "dancing-at-events";
 
 export function OutOfSchoolLeadership() {
   const { intro: musicIntro, items: musicItems } = getMusic();
@@ -223,7 +224,11 @@ export function OutOfSchoolLeadership() {
   // beside Church. Any other non-featured entry just falls in afterwards.
   const ponnonam = rest.find((entry) => entry.id === PONNONAM_ID);
   const church = rest.find((entry) => entry.id === CHURCH_ID);
-  const otherRest = rest.filter((entry) => entry.id !== PONNONAM_ID && entry.id !== CHURCH_ID);
+  // Dancing sits in the right-hand column, directly under Private Tutoring.
+  const dancing = rest.find((entry) => entry.id === DANCE_ID);
+  const otherRest = rest.filter(
+    (entry) => entry.id !== PONNONAM_ID && entry.id !== CHURCH_ID && entry.id !== DANCE_ID,
+  );
 
   const isEmpty = musicItems.length === 0 && !tutoringEntry;
 
@@ -260,7 +265,7 @@ export function OutOfSchoolLeadership() {
                 </Reveal>
               ))}
 
-              {ponnonam || church || tutoringEntry ? (
+              {ponnonam || church || tutoringEntry || dancing ? (
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-6">
                     {ponnonam ? (
@@ -296,10 +301,40 @@ export function OutOfSchoolLeadership() {
                       : null}
                   </div>
 
-                  {tutoringEntry ? (
-                    <Reveal delay={0.1}>
-                      <TutoringCard entry={tutoringEntry} />
-                    </Reveal>
+                  {tutoringEntry || dancing ? (
+                    <div className="space-y-6">
+                      {tutoringEntry ? (
+                        <Reveal delay={0.1}>
+                          <TutoringCard entry={tutoringEntry} />
+                        </Reveal>
+                      ) : null}
+                      {dancing
+                        ? (() => {
+                            const Icon = getIcon(TYPE_ICON[dancing.type]);
+                            return (
+                              <Reveal delay={0.15}>
+                                <div className="flex h-full items-start gap-3 rounded-2xl border border-line bg-paper-raised p-5">
+                                  <Icon
+                                    className="mt-1 h-5 w-5 shrink-0 text-accent-warm"
+                                    aria-hidden="true"
+                                  />
+                                  <div>
+                                    <p className="font-display text-body-lg text-ink">
+                                      {dancing.title}
+                                    </p>
+                                    <p className="mt-1 text-small text-ink-soft">
+                                      {dancing.description}
+                                    </p>
+                                    {dancing.dateLabel ? (
+                                      <Tag className="mt-2">{dancing.dateLabel}</Tag>
+                                    ) : null}
+                                  </div>
+                                </div>
+                              </Reveal>
+                            );
+                          })()
+                        : null}
+                    </div>
                   ) : null}
                 </div>
               ) : null}

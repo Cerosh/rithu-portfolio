@@ -15,7 +15,7 @@ export function Resume() {
       style={{ background: "linear-gradient(180deg, #873e3e 0%, #7d3a39 100%)" }}
     >
       <Container className="max-w-3xl text-center">
-        <SectionHeading eyebrow="Resume" title="A clean, downloadable resume" align="center" />
+        <SectionHeading eyebrow="Resume" title="Downloadable resume" align="center" />
 
         <Reveal className="mt-8 flex flex-col items-center gap-3">
           {resume.fileSrc ? (
